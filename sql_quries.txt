@@ -1,0 +1,32 @@
+1.select distinct city from customers order by city asc
+2.select distinct country from customers order by country asc
+3.select distinct city,country from customers
+4.select avg(total_order_amount) from orders
+5.select sum(total_order_amount) from orders
+
+
+
+
+
+6.Print all the details of Customers whose First Name starts with 'A'.
+  Sort the result in ascending order of CustomerID.
+== select * from customers where firstname like "A%" order by customerid asc
+
+
+7.Print all the details of customers whose first as well as last name contains the letter 'A'
+  Sort the result in ascending order of CustomerID.
+ == 3.select * from customers where FirstName like "%A%" and LastName like "%A%" order by customerID asc
+
+
+8.Print Customer's all unique City names which start with the letter M.
+  Order the output in alphabetical order of City name.  
+ == select distinct city from customers where city like "M%" order by city asc 
+
+
+9.Print the Firstname and LastName of Customers whose FirstName consists of the letter C and LastName consists of the letter E.
+  Order your output in alphabetical order of FirstName. For Customers with same FirstName, order such rows in alphabetical order of LastName.
+ == select firstname, lastname from customers where firstname like "%C%" and lastname like "%E%" order by firstname, lastname asc
+
+10.Print the names of Customers whose FirstName consists of the letter Z or LastName consists of the letter K.
+   Order your output in alphabetical order of FirstName. For Customers with same FirstName, order such rows in alphabetical order of LastName.  
+  == select firstname, lastname  from customers where firstname like "%Z%" or lastname like "%K%" order by firstname, lastname asc  
